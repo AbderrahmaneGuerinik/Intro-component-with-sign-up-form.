@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  /*Colors*/
+  --pink: #ff7979;
+  --green: #38cc8b;
+  --violet: #5e54a4;
+  --dark-violet: #3d3b48;
+  --white: #ffffff;
+
+  /*Font-Weigh1*/
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+/*Initialising styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+input::placeholder,
+button {
+  font-family: inherit;
+}
+
+body {
+  min-height: 100svh;
+  background-color: var(--pink);
+  background-image: url("images/bg-intro-desktop.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(111.0036rem, 95%);
+  min-height: 56.7rem;
+}
+
+.main__right {
+  height: 100%;
+}
+
+.main__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sign__heading {
+  font-size: 5rem;
+  font-weight: var(--fw-700);
+  line-height: 5.5rem;
+  letter-spacing: -0.521px;
+  margin-bottom: 4.7rem;
+  color: var(--white);
+}
+
+.sign__description {
+  font-size: 1.6rem;
+  font-weight: var(--fw-500);
+  line-height: 2.6rem;
+  color: var(--white);
+  outline: 1px;
+  outline-color: black;
+}
+
+.sign__free-trial {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: var(--fw-400);
+  letter-spacing: 0.268px;
+  width: 52.9rem;
+  background-color: var(--violet);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2.1rem 0;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  margin-bottom: 2.4rem;
+  transition: all 0.3s;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.span {
+  font-weight: var(--fw-700);
+}
+
+.sign__form {
+  /*min-height: 47.4rem;*/
+  width: 52.9rem;
+  border-radius: 10px;
+  padding: 4rem 2.8rem 4rem 4.8rem;
+  background-color: var(--white);
+  text-align: right;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.sign__input {
+  width: 100%;
+  padding: 2rem 0 2rem 3.1rem;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+
+  outline: none;
+  font-size: 1.4rem;
+  font-weight: var(--fw-600);
+  letter-spacing: 0.25px;
+  color: var(--dark-violet);
+}
+
+.div-after {
+  width: 100%;
+  position: relative;
+}
+
+.mb-1 {
+  margin-bottom: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 9px;
+}
+
+.icon-error::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 44%;
+  transform: translateY(-50%);
+  right: 23px;
+  height: 3rem;
+  width: 3rem;
+  background-image: url("images/bg-intro-mobile.png");
+  background-position: center;
+  background-size: cover;
+}
+.sign__input:focus {
+  border: 1px solid #5e54a4;
+}
+
+.sign__input::placeholder {
+  font-size: 1.4rem;
+  font-weight: var(--fw-600);
+  letter-spacing: 0.25px;
+  color: var(--dark-violet);
+  opacity: 0.8;
+}
+
+.placeholder-error::placeholder {
+  color: var(--pink);
+}
+
+.sign_submit {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.6rem 0;
+  border-radius: 5px;
+  background: #38cc8b;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.09) inset;
+  font-size: 1.5rem;
+  font-weight: var(--fw-600);
+  color: var(--white);
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s;
+}
+
+.free-description {
+  color: #bab7d4;
+  font-size: 1.1rem;
+  font-weight: var(--fw-500);
+  text-align: center;
+}
+
+.span-free {
+  text-decoration: none;
+  color: #ff7979;
+  font-weight: var(--fw-700);
+}
+
+.text-error {
+  display: inline-block;
+  margin-bottom: 2.3rem;
+  color: #ff7979;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: var(--fw-500);
+}
+
+.border-error,
+.border-error:focus {
+  border: 2px solid var(--pink);
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+/* 1090px*/
+@media only screen and (max-width: 68.125em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*900px*/
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/*800px*/
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/*700px*/
+@media only screen and (max-width: 43.75em) {
+  html {
+    font-size: 35%;
+  }
+}
+
+/*600px*/
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 30%;
+  }
+}
+
+/*500px*/
+@media only screen and (max-width: 31.25em) {
+  html {
+    font-size: 25%;
+  }
+}
+
+/*480px*/
+@media only screen and (max-width: 30em) {
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    padding-top: 4rem;
+    background-image: url("intro-component-with-signup-form-master/images/bg-intro-mobile.png");
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 86.6rem;
+    width: min(100%, 32.7rem);
+    place-content: center;
+    margin-top: 4rem;
+  }
+  .main__right {
+    margin-bottom: 2rem;
+  }
+  .sign__form {
+    width: 100%;
+  }
+  .main__left {
+    width: 100%;
+    text-align: center;
+  }
+  .sign__heading {
+    font-size: 2.8rem;
+    margin-bottom: 6rem;
+    line-height: 3.6rem;
+  }
+  .sign__description {
+    font-size: 1.6rem;
+    margin-bottom: 6.2rem;
+    line-height: 2.6rem;
+  }
+  .sign_submit {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .sign__free-trial {
+    padding-block: 2rem;
+    width: 100%;
+    padding-inline: 7rem;
+  }
+  .sign__form {
+    padding: 2.2rem;
+  }
+  .sign__input {
+    width: 100%;
+    padding: 1.8rem;
+    font-size: 1.4rem;
+  }
+  .sign_submit {
+    width: 100%;
+    font-size: 1.5rem;
+    padding-block: 1.7rem;
+  }
+  .free-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 21.25em) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    background-image: url("./intro-component-with-signup-form-master/images/bg-intro-mobile.png");
+  }
+}
+
+@keyframes button-anim {
+  0% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (hover: hover) {
+  .sign_submit:hover {
+    transform: translateY(-4px);
+    opacity: 0.8;
+  }
+  .sign_submit:active {
+    transform: translateY(0);
+  }
+}
